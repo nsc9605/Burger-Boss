@@ -65,7 +65,7 @@ var orm = {
         }
   
         cb(result);
-      });
+      }); 
     },
 
     // Update devoured from false to true in database
