@@ -20,12 +20,12 @@ function printQuestionMarks(num) {
       var value = ob[key];
       // check to skip hidden properties
       if (Object.hasOwnProperty.call(ob, key)) {
-        // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+        // if string with spaces, add quotations (Impossible Burger => 'Impossible Burger')
         if (typeof value === "string" && value.indexOf(" ") >= 0) {
           value = "'" + value + "'";
         }
-        // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
+        // e.g. {burger_name: 'Impossible Burger'} => ["name='Impossible Burger'"]
+        // e.g. {devoured: true} => ["devoured=true"]
         arr.push(key + "=" + value);
       }
     }
@@ -68,14 +68,14 @@ var orm = {
       });
     },
 
-    // Update devour from false to true in database
-    updateOne: function(table, id, cb) {
+    // Update devoured from false to true in database
+    updateOne: function(table, objColVals, id, cb) {
       var queryString = "UPDATE " + table + "SET ? WHERE ?";
   
       queryString += " SET ";
       queryString += objToSql(objColVals);
       queryString += " WHERE ";
-      queryString += condition;
+      queryString += id;
   
       console.log(queryString);
       connection.query(queryString, function(err, result) {
@@ -88,6 +88,6 @@ var orm = {
     }
   };
   
-  // Export the orm object for the model (cat.js).
+  // Export the orm object for the model (burger.js).
   module.exports = orm;
   
