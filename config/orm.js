@@ -54,7 +54,7 @@ var orm = {
       queryString += cols.toString();
       queryString += ") ";
       queryString += "VALUES (";
-      queryString += "?, ?";
+      queryString += printQuestionMarks(vals.length);
       queryString += ") ";
   
       console.log(queryString);
