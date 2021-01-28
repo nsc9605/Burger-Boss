@@ -69,13 +69,13 @@ var orm = {
     },
 
     // Update devoured from false to true in database
-    updateOne: function(table, objColVals, id, cb) {
+    updateOne: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table + "SET ? WHERE ?";
   
       queryString += " SET ";
       queryString += objToSql(objColVals);
       queryString += " WHERE ";
-      queryString += id;
+      queryString += condition;
   
       console.log(queryString);
       connection.query(queryString, function(err, result) {
