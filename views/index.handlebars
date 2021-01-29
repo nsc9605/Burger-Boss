@@ -20,22 +20,36 @@
     </form>
   </div>
 
-  <h2>Burgers that are not devoured!</h2>
+  {{!-- Devoured Burgers List --}}
+  <div class="burger-list">
+    <div class="container">
+      <div class="row">
+        <h2>Newly Constructed Burgers</h2>
 
-  <ul>
-    {{#each burger}}
-    {{#unless devoured}}
-    {{> burger}}
-    {{/unless}}
-    {{/each}}
-  </ul>
+        <ul class="burgers">
+          {{#each burger}}
+          {{#unless devoured}}
+          {{> burger-block}}
+          {{/unless}}
+          {{/each}}
+        </ul>
 
-  <h2>Burgers that are devoured!</h2>
+      </div>
+    </div>
 
-  <ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers}}
-    {{/if}}
-    {{/each}}
-  </ul>
+
+
+    <div class="col">
+      <div class="burger-col">
+        <h2>Devoured Burgers!</h2>
+        <ul class="burgers">
+          {{#each burger}}
+          {{#if devoured}}
+          {{> burger-block}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
