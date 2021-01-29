@@ -1,7 +1,7 @@
 const express = require('express');
+const router = express.Router();
 const burger = require('../models/burger.js');
 
-const router = express.Router();
 
 // Create all the routes and set up logic.
 router.get("/", function(req, res) {
@@ -14,31 +14,47 @@ router.get("/", function(req, res) {
     });
   });
   
-  router.post("/api/burger", function(req, res) {
-    burger.insertOne(["name", "burger"], [req.body.name, req.body.burger_name], function(result) {
-        console.log("req.body.name, req.body.burger_name");
-        // Send back the ID of the new quote
+  router.post("/api/burgers", function(req, res) {
+    burger.insertOne("burgers", "devoured", [req.body.burger_name, req.body.devoured], function(result) {
+        console.log("req.body.burger_name");
+        // Send back the ID of the new burger
       res.json({ id: result.insertId });
+      // res.status(200).end();
     });
   });
   
-  router.put("/api/burger/:id", function(req, res) {
+  router.put("/api/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
-  
+    var col = "devoured = " + req.body.devoured;
     console.log("condition", condition);
 
-    burger.updateOne({ 
-      burger: req.body.burger_name
-    }, condition, function(result) {
+    burger.updateOne(col, condition, function(result) { 
       if (result.changedRows === 0) {
         return res.status(404).end();
-      // } else {
-      //   res.status(200).end();
-      // }
-    }
+      } else {
+        res.status(200).end();
+      }
+    });
     console.log("updated")
+  
+});
+router.delete("/api/cats/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  cat.delete(condition, function(result) {
+    if (result.affectedRows == 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
   });
 });
+
+  
+  // Export routes for server.js to use.
+  module.exports = router;
+  
     // burger.select(
     //   {
     //     devoured: req.body.devoured
@@ -54,7 +70,3 @@ router.get("/", function(req, res) {
     //   }
     // );
  
-  
-  // Export routes for server.js to use.
-  module.exports = router;
-  
