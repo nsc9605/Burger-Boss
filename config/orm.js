@@ -33,8 +33,8 @@ function printQuestionMarks(num) {
 // Object for all our SQL statement functions.
 var orm = {
     // Select all to retrieve from database
-    selectAll: function(tableInput, cb) {
-      var queryString = "SELECT * FROM " + tableInput + ";";
+    selectAll: function(table, cb) {
+      var queryString = "SELECT * FROM " + table + ";";
       // var queryString = "SELECT * FROM ??";
       connection.query(queryString, function(err, result) {
         if (err) {
@@ -97,7 +97,7 @@ var orm = {
       });
     }
   };
-    
+
   // Export the orm object for the model (burger.js).
   module.exports = orm;
   

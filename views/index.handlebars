@@ -25,21 +25,36 @@
     <div class="container">
       <div class="row">
         <h2>Newly Constructed Burgers</h2>
+        <div class="col-6 float-left">
+          <div class="burgers">
+            {{#each burgers}}
+              {{#unless devoured}}
+                <div class="burger-text">
+                  {{this.id}} - {{this.burger_name}}
+                    <button class="devour-burger-btn" data-id="{{this.id}}">Devour Burger!</button>
+                </div>
+              {{/unless}}
+            {{/each}}
+          </div>
+        </div>
+        <h2>Devoured Burgers!</h2>
+        <div class="col-6 float-right">
+            <div class="burgers">
+               {{#each burgers}}
+                  {{#if devoured}}
+                    <div id="hasBeenDevoured" class="burger-text">
+                        {{this.id}} - {{this.burger_name}}
+                    </div>
+                  {{/if}}
+                {{/each}}
 
-        <ul class="burgers">
-          {{#each burgers}}
-          {{#unless devoured}}
-          {{> burger-block devoured=false}}
-          {{/unless}}
-          {{/each}}
-        </ul>
-
+        </div>
       </div>
     </div>
 
 
 
-    <div class="col">
+    {{!-- <div class="col">
       <div class="burger-col">
         <h2>Devoured Burgers!</h2>
         <ul class="burgers">
@@ -50,6 +65,6 @@
           {{/each}}
         </ul>
       </div>
-    </div>
+    </div> --}}
   </div>
 </div>
