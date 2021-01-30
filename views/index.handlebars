@@ -8,48 +8,53 @@
 
   {{!-- ADD BURGER FORM --}}
   <h2>Add a burger</h2>
-  <div class="burger-list">
-    <form class="create-form" method="POST" action="/burgers">
+  <div>
+    {{!-- <form id="newBurger" method="POST" action="/burgers"> --}}
+    <form class="newBurger-form">  
       <div class="form-group p-3">
-        <label for="burger">Burger Name:</label>
-        <input id="burger" type="text" name="burger"></input>
+        <label for="newBurger-input">Burger Name:</label>
+        <input id="newBurger-input" type="text" name="burger_name"></input>
       </div>
       {{!-- <div class="form-row"> --}}
-        <button class="add-burger btn btn-success text-white" type="submit">Add Burger</button>
+        <button id="newBurger-input-submit" class="btn-success text-white" type="submit">Add Burger</button>
       {{!-- </div> --}}
     </form>
   </div>
 
   {{!-- Devoured Burgers List --}}
-  <div class="burger-list">
-    <div class="container">
+  <div class="container">
+    <div class="burger-list">
       <div class="row">
         <h2>Newly Constructed Burgers</h2>
         <div class="col-sm-6 p-3">
-          <div class="panel panel-default float-left">
+          <div class="newBurger-input panel panel-default float-left">
+            <ul>
             {{#each burgers}}
               {{#unless devoured}}
-                <div class="burger-text">
-                  {{this.id}} - {{this.burger_name}}
-                    <button class="devour-burger btn-warning" data-id="{{this.id}}" data-devour="{{this.devoured}}">Devour Burger!</button>
+                <div id="newBurger-input" name="burger_name">
+                  {{id}} - {{burger_name}}
+                    <button id="devour-burger" class="devour-burger btn-warning" data-id="{{this.id}}">Devour Burger!</button>
+                     {{!-- data-devour="{{devoured}}" --}}
                 </div>
               {{/unless}}
             {{/each}}
+            </ul>
           </div>
         </div>
+    </div>
         <h2>Devoured Burgers!</h2>
         <div class="col-sm-6 p-4">
             <div class="panel panel-default float-right">
                {{#each burgers}}
                   {{#if devoured}}
-                    <div id="hasBeenDevoured" class="burger-text">
-                        {{this.id}} - {{this.burger_name}}
+                    <div id="devoured">
+                         {{burger_name}} 
                     </div>
                   {{/if}}
                 {{/each}}
 
         </div>
-      </div>
+      
     </div>
 
 
