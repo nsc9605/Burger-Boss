@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
   router.post("/api/burgers", (req, res) => {
     burger.insertOne(
       ["burger_name", "devoured"], 
-      [req.body.burger_name, req.body.devoured], 
+      [req.body.burger_name, false], 
       (result) => {
         console.log("req.body.burger_name");
         // Send back the ID of the new burger
@@ -26,7 +26,7 @@ router.get("/", (req, res) => {
     });
   });
   
-  router.put("/api/burgers/:id", (req, res) => {
+  router.put("/api/devoured/:id", (req, res) => {
     var condition = "id = " + req.params.id;
     // var col = "devoured = " + req.body.devoured;
     console.log("condition", condition);

@@ -9,16 +9,28 @@ body {
   margin: 0 auto; /* Center the DIV horizontally */
 }
 
+.jumbotron {
+  /* background-image: url("../img/");
+  background-repeat: no-repeat;
+  background-position: right; */
+  background-color: #3d81bb;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  color: #ffffff;
+  margin-top: 3%;
+}
+/* 
 .fixed-header, .fixed-footer {
   width: 100%;
-  height: 50px;
+  height: 70px;
   font-size: 40px;
   text-align: center;
   position: fixed;        
   background: rgba(92, 125, 232, 0.872);
   padding: 10px 0;
   color: #fff;
-}
+} */
 
 .fixed-header {
   top: 0;
