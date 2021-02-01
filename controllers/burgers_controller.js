@@ -28,11 +28,9 @@ router.get("/", (req, res) => {
   
   router.put("/api/burgers/:id", (req, res) => {
     var condition = "id = " + req.params.id;
-    // var cols = "devoured = " + req.body.devoured;
     console.log("condition", condition);
 
     burger.updateOne(
-      // cols, condition,
       { devoured: req.body.devoured }, 
       condition, 
       (result) => { 
