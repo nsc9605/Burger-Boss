@@ -16,7 +16,7 @@ header {
   font-family: 'Fascinate', cursive !important;
   color: white;
 	font-size: 40px;
-	text-shadow: -1px 1px 2px rgb(250, 203, 203),
+	text-shadow: -1px 1px 2px rgb(19, 16, 16),
 				  1px 1px 2px #000,
 				  1px -1px 0 #000,
 				  -1px -1px 0 #000;
@@ -26,12 +26,13 @@ header {
 h1 {
   font-size: 70px;
   color: white;
-  /* text-shadow: */
+  /* text-shadow:  */
 }
 
 h3 {
   font-size: 40px;
   text-align: center;
+  text-shadow: -1px -1px;
 }
 
 .add {
@@ -39,9 +40,18 @@ h3 {
   text-shadow: -1px 1px 2px rgb(7, 6, 6);
 }
 
+p {
+  border: black solid;
+  background-color: rgb(225, 188, 109);
+  color: rgb(10, 7, 7);
+  border-radius: 3px;
+  padding: 0.5em;
+}
+
 input {
   height: 40px;
   font-family: 'Yusei Magic', sans-serif;
+  border-radius: 4px;
 }
 
 span {
@@ -51,11 +61,18 @@ span {
 .submitBurg {
   background-color: rgb(205, 115, 115);
   color: white;
-  height: 40px
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.container {
-  padding-right: 30%;
+.submitBurg:hover {
+  background-color: rgb(162, 63, 63);
+}
+
+.devour-burger:hover {
+  background-color: rgba(12, 108, 12, 0.762)
 }
 
 .container-list {
@@ -64,11 +81,15 @@ span {
   border-radius: 3px;
   opacity: 0.8;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding: 2%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   justify-content: center;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .devour-burger {
@@ -76,17 +97,21 @@ span {
   border: 2px solid black;
   background-color: rgb(71, 140, 71);
   color: white;
+  align-items: right;
 }
 
 .newBurger-form {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-gap: 10px;
+  width: 70%
 }
+
 
 @media (min-width: 100px) {
   .container {
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
     margin: 0 auto; /* Center the DIV horizontally */
   }
 }

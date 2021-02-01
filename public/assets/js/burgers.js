@@ -4,11 +4,12 @@ $(function() {
   $(".newBurger-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-
-    var newBurger = {
-      // burger_name: $('#newBurger').val() == undefined ? "" : $('#newBurger').val().trim(),
-      burger_name: $('#newBurger-input').val().trim(),
-      devoured: false
+    let burger_name =  $('#newBurger-input').val().trim();
+    // Set input to not be empty
+    if (burger_name != "") {
+      var newBurger = {
+        burger_name: $('#newBurger-input').val().trim(),
+        devoured: false
     };
     
     // Send the POST request.
@@ -20,6 +21,10 @@ $(function() {
         // Reload the page to get the updated list
         location.reload();
       });
+    }
+    else {
+      alert("Please enter a burger!")
+    }
   });
 
     $(".devour-burger").on("click", function(event) {

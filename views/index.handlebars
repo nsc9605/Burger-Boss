@@ -1,23 +1,22 @@
-<div class="container">
 
+<div class="container">
   {{!-- Heading Area --}}
   <header>
-    <h1>Burger Boss!<span> Create, Eat, Devour!</span></h1>
+    <h1>Burger Boss<span><img src="/assets/img/icon.png" alt="Burger"/></span></h1>
   </header>
-
   {{!-- ADD BURGER FORM --}}
   <h2 class="add">Add a burger</h2>
   <div>
     <form class="newBurger-form">
-      <input id="newBurger-input" type="text" name="burger_name" placeholder="Enter a burger"></input>
-      <button id="newBurger-input-submit" class="submitBurg" type="submit">Add Burger</button>
+      <input id="newBurger-input" type="text" name="burger_name" placeholder="Enter a burger..."></input>
+      <button id="newBurger-input-submit" class="submitBurg" type="submit"><i class="fas fa-hamburger"></i>Add Burger!</button>
     </form>
   </div>
 
   {{!-- Devoured Burgers List --}}
   <div class="container-list">
     <div>
-      <div class="float-left">
+      <div>
         <h3>Generated Burgers</h3>
         <div>
           <ul>
@@ -25,8 +24,7 @@
             {{#unless devoured}}
             <p>
               {{id}} {{burger_name}}
-              <button id="devour-burger" class="devour-burger" data-id="{{this.id}}">Devour
-                Burger!</button>
+              <button id="devour-burger" class="devour-burger" data-id="{{this.id}}">Devour!</button>
             </p>
             {{/unless}}
             {{/each}}
