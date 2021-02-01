@@ -24,10 +24,8 @@ $(function() {
 
     $(".devour-burger").on("click", function(event) {
       event.preventDefault();
-
       var id = $(this).data("id");
-      // var hasBeenDevoured = $(this).data("devoured");
-  
+
       var devouredStatus = {
         devoured: true
       };

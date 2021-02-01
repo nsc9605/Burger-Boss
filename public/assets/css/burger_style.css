@@ -1,52 +1,113 @@
-body {        
-  padding-top: 60px;
-  padding-bottom: 40px;
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  background: url(../img/burger-right.jpg) no-repeat center center fixed; 
+  /* opacity: 0.6; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: 'Yusei Magic', sans-serif;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto; /* Center the DIV horizontally */
+header {
+  font-family: 'Fascinate', cursive !important;
+  color: white;
+	font-size: 40px;
+	text-shadow: -1px 1px 2px rgb(250, 203, 203),
+				  1px 1px 2px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
+  margin-left: 3%;
 }
 
-.jumbotron {
-  /* background-image: url("../img/");
-  background-repeat: no-repeat;
-  background-position: right; */
-  background-color: #3d81bb;
-  text-align: center;
-  width: 100%;
-  height: 80px;
-  color: #ffffff;
-  margin-top: 3%;
+h1 {
+  font-size: 70px;
+  color: white;
+  /* text-shadow: */
 }
-/* 
-.fixed-header, .fixed-footer {
-  width: 100%;
-  height: 70px;
+
+h3 {
   font-size: 40px;
   text-align: center;
-  position: fixed;        
-  background: rgba(92, 125, 232, 0.872);
-  padding: 10px 0;
-  color: #fff;
-} */
-
-.fixed-header {
-  top: 0;
 }
 
-.fixed-footer {
-  bottom: 0;
-}    
-
-nav a { 
-  color: #fff;
-  text-decoration: none;
-  padding: 7px 25px;
-  display: inline-block;
+.add {
+  color: white;
+  text-shadow: -1px 1px 2px rgb(7, 6, 6);
 }
 
-.container p {
-  line-height: 200px; /* Create scrollbar to test positioning */
+input {
+  height: 40px;
+  font-family: 'Yusei Magic', sans-serif;
 }
+
+span {
+  font-size: 40px;
+}
+
+.submitBurg {
+  background-color: rgb(205, 115, 115);
+  color: white;
+  height: 40px
+}
+
+.container {
+  padding-right: 30%;
+}
+
+.container-list {
+  background-color: #fef5e4;
+  border: 2px solid black;
+  border-radius: 3px;
+  opacity: 0.8;
+  margin-top: 10px;
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+.devour-burger {
+  border-radius: 3px;
+  border: 2px solid black;
+  background-color: rgb(71, 140, 71);
+  color: white;
+}
+
+.newBurger-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+}
+
+@media (min-width: 100px) {
+  .container {
+    width: 100%;
+    margin: 0 auto; /* Center the DIV horizontally */
+  }
+}
+
+@media (min-width: 500px) {
+  .container {
+    width: 100%;
+    margin: 0 auto; /* Center the DIV horizontally */
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 80%;
+    margin: 0 auto; 
+  }
+} 
+
+@media (min-width: 900px) {
+  .container {
+    width: 80%;
+    margin: 0 auto; 
+  }
+} 

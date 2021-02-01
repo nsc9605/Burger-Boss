@@ -1,75 +1,56 @@
-<div class="container main">
+<div class="container">
 
   {{!-- Heading Area --}}
-  <div class="jumbotron">
-    <div class="container"></div>
-    <h1>Burger Boss</h1>
-  </div>
+  <header>
+    <h1>Burger Boss!<span> Create, Eat, Devour!</span></h1>
+  </header>
 
   {{!-- ADD BURGER FORM --}}
-  <h2>Add a burger</h2>
+  <h2 class="add">Add a burger</h2>
   <div>
-    {{!-- <form id="newBurger" method="POST" action="/burgers"> --}}
-    <form class="newBurger-form">  
-      <div class="form-group p-3">
-        <label for="newBurger-input">Burger Name:</label>
-        <input id="newBurger-input" type="text" name="burger_name"></input>
-      </div>
-      {{!-- <div class="form-row"> --}}
-        <button id="newBurger-input-submit" class="btn-success text-white" type="submit">Add Burger</button>
-      {{!-- </div> --}}
+    <form class="newBurger-form">
+      <input id="newBurger-input" type="text" name="burger_name" placeholder="Enter a burger"></input>
+      <button id="newBurger-input-submit" class="submitBurg" type="submit">Add Burger</button>
     </form>
   </div>
 
   {{!-- Devoured Burgers List --}}
-  <div class="container">
-    <div class="burger-list">
-      <div class="row">
-        <h2>Newly Constructed Burgers</h2>
-        <div class="col-sm-6 p-3">
-          <div class="newBurger-input panel panel-default float-left">
-            <ul>
+  <div class="container-list">
+    <div>
+      <div class="float-left">
+        <h3>Generated Burgers</h3>
+        <div>
+          <ul>
             {{#each burgers}}
-              {{#unless devoured}}
-                <div id="newBurger-input" name="burger_name">
-                  {{id}} - {{burger_name}}
-                    <button id="devour-burger" class="devour-burger btn-warning" data-id="{{this.id}}">Devour Burger!</button>
-                     {{!-- data-devour="{{devoured}}" --}}
-                </div>
-              {{/unless}}
+            {{#unless devoured}}
+            <p>
+              {{id}} {{burger_name}}
+              <button id="devour-burger" class="devour-burger" data-id="{{this.id}}">Devour
+                Burger!</button>
+            </p>
+            {{/unless}}
             {{/each}}
-            </ul>
-          </div>
+          </ul>
         </div>
-    </div>
-        <h2>Devoured Burgers!</h2>
-        <div class="col-sm-6 p-4">
-            <div class="panel panel-default float-right">
-               {{#each burgers}}
-                  {{#if devoured}}
-                    <div id="devoured">
-                         {{burger_name}} 
-                    </div>
-                  {{/if}}
-                {{/each}}
-
-        </div>
-      
+      </div>
     </div>
 
 
+    <div>
 
-    {{!-- <div class="col">
-      <div class="burger-col">
-        <h2>Devoured Burgers!</h2>
-        <ul class="burgers">
+      <h3>Devoured Burgers</h3>
+      <div>
+        <ul>
           {{#each burgers}}
           {{#if devoured}}
-          {{> burger-block devoured=true}}
+          <p>
+            {{id}} {{burger_name}}
+            {{!-- <button id="make-another" class="make-another" data-id="{{this.id}}">Make Again!</button> --}}
+          </p>
           {{/if}}
           {{/each}}
         </ul>
       </div>
-    </div> --}}
+    </div>
   </div>
 </div>
