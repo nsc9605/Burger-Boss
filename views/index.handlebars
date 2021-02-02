@@ -1,11 +1,11 @@
 <div class="container">
   {{!-- Heading Area --}}
   <header>
-    <h1>Burger Boss<span><img src="/assets/img/icon.png" alt="Burger" /></span></h1>
+    <h1>Burger Boss<span><img src="/assets/img/smiley.PNG" alt="Burger" /></span></h1>
   </header>
   {{!-- ADD BURGER FORM --}}
   <div>
-    <h2 class="add">Add a burger</h2>
+    <h2 class="add">Add-a-Burger!</h2>
     <div id="info">To add your go to burger to the list below,
       <br> 
       simply type in the name of said burger and  <span>DEVOUR IT!</span></div>
@@ -13,8 +13,7 @@
   <div>
     <form class="newBurger-form">
       <input id="newBurger-input" type="text" name="burger_name" placeholder="Enter a burger..."></input>
-      <button id="newBurger-input-submit" class="submitBurg" type="submit"><i class="fas fa-hamburger"></i>Add
-        Burger!</button>
+      <button id="newBurger-input-submit" class="submitBurg" type="submit">Add Burger!</button>
     </form>
   </div>
 
@@ -41,7 +40,6 @@
 
 
     <div>
-
       <h3>Devoured Burgers</h3>
       <div>
         <ul>
@@ -49,7 +47,6 @@
           {{#if devoured}}
           <p>
             {{burger_name}}
-            {{!-- <button id="make-another" class="make-another" data-id="{{this.id}}">Make Again!</button> --}}
           </p>
           {{/if}}
           {{/each}}

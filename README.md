@@ -6,7 +6,8 @@
 
   Burger Boss is an application that tracks burgers waiting to be **devoured** and those that have already been **devoured**. Following the MVC design pattern, this application was created using Node, Express, Express Handlebars, and MySQL. This application allows the user to build a list of burgers which will save to a database. The user can enter the name of the burger they would like to add into the form which will then appear in the list of burgers on the left side of the window. That burger can then be devoured and added to the list of devoured burgers. There is also an option to delete a burger if the user wishes.
 
-  [Click me to deploy app!](https://burger-boss-catapano.herokuapp.com)
+
+  [Click here to go to live deployed app!](https://burger-boss-catapano.herokuapp.com)
   
   ## Table of Contents
   
@@ -31,7 +32,7 @@
   
 
   ## Demonstration
-  ![Burger-Boss Gif](/public/assets/img/demopage.png)
+  ![Burger-Boss Gif](./public/assets/img/demo-page.png)
 
 
   ## Installation

@@ -29,7 +29,7 @@ router.get("/", (req, res) => {
   router.put("/api/burgers/:id", (req, res) => {
     var condition = "id = " + req.params.id;
     console.log("condition", condition);
-
+  // Set to return with 404 error if nothing has changed
     burger.updateOne(
       { devoured: req.body.devoured }, 
       condition, 
