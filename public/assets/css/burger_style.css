@@ -127,7 +127,7 @@ span {
   padding: 2%;
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
-  grid-gap: 30px;
+  grid-gap: 15px;
   justify-content: center;
   width: 70%;
   overflow: hidden;
@@ -157,9 +157,9 @@ span {
 @media (min-width: 100px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(15em, 1fr);
     grid-gap: 5px;
-    margin: auto; /* Center the DIV horizontally */
+    margin: 0 auto; /* Center the DIV horizontally */
   } 
 }  
 

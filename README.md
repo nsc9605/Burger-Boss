@@ -7,12 +7,12 @@
   Burger Boss is an application that tracks burgers waiting to be **devoured** and those that have already been **devoured**. Following the MVC design pattern, this application was created using Node, Express, Express Handlebars, and MySQL. This application allows the user to build a list of burgers which will save to a database. The user can enter the name of the burger they would like to add into the form which will then appear in the list of burgers on the left side of the window. That burger can then be devoured and added to the list of devoured burgers on the right side of the screen.
 
 
-  => [Click here to go to live deployed app!](https://burger-boss-catapano.herokuapp.com)
+  :round_pushpin: [Click here to navigate to deployed app on Heroku!](https://burger-boss-catapano.herokuapp.com) :round_pushpin:
   
   ## Table of Contents
   
-  * [Features](#features)
   * [Demonstration](#demonstration)
+  * [Features](#features)
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
@@ -20,6 +20,11 @@
   * [Technologies](#technologies)
   * [Contact Information](#contact-information)
  
+
+ ## Demonstration
+  ![Burger-Boss Gif](./public/assets/img/Burger-Boss.gif)
+
+
   ## Features
 
   - The `config` folder houses the two javascript files:
@@ -31,8 +36,8 @@
     * `seeds.sql` can contain a few starter burgers to populate the database with options.
   
   ### Directory Structure
-  ```
 
+  ```
 ├── config
 │   ├── connection.js
 │   └── orm.js
@@ -67,13 +72,9 @@
     ├── index.handlebars
     └── layouts
         └── main.handlebars
-
 ```
 
-  ## Demonstration
-  ![Burger-Boss Gif](./public/assets/img/Burger-Boss.gif)
-
-
+  
   ## Installation
 
   The following dependencies are required to be installed for this application to run properly:
