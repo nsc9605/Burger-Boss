@@ -26,9 +26,8 @@
           <ul>
             {{#each burgers}}
             {{#unless devoured}}
-            <p>
+            <p id="burgs">
               {{burger_name}}
-              <button id="devour-burger" class="devour-burger" data-id="{{this.id}}">Devour!</button>
             </p>
             {{/unless}}
             {{/each}}
@@ -37,6 +36,22 @@
       </div>
     </div>
 
+{{!-- Devour It column  --}}
+<div>
+    <h3>Devour it?</h3>
+    <div>
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <p class="dev-col">
+                        <button id="devour-burger" class="devour-burger" data-id="{{this.id}}">Devour!
+                        </button>
+                    </p>
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
 
     <div>
       <h3>Devoured Burgers</h3>
@@ -44,7 +59,7 @@
         <ul>
           {{#each burgers}}
           {{#if devoured}}
-          <p>
+          <p id="burgs">
             {{burger_name}}
           </p>
           {{/if}}
