@@ -31,7 +31,7 @@
   
 
   ## Demonstration
-  ![Burger-Boss Gif](./public/assets/img/)
+  ![Burger-Boss Gif](/public/assets/img/demopage.png)
 
 
   ## Installation

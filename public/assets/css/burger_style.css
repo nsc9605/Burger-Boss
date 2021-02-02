@@ -12,10 +12,18 @@ body {
   font-family: 'Yusei Magic', sans-serif;
 }
 
-header {
-  font-family: 'Fascinate', cursive !important;
+span {
+  color: rgb(231, 138, 38);
+  text-shadow: -1px 1px 2px rgb(black);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 80px;
   color: white;
-	font-size: 40px;
+  font-family: 'Fascinate', cursive;
+  color: white;
+  /* text-align: center; */
 	text-shadow: -1px 1px 2px rgb(19, 16, 16),
 				  1px 1px 2px #000,
 				  1px -1px 0 #000,
@@ -23,21 +31,22 @@ header {
   margin-left: 3%;
 }
 
-h1 {
-  font-size: 70px;
-  color: white;
-  /* text-shadow:  */
-}
-
 h3 {
   font-size: 40px;
   text-align: center;
-  text-shadow: -1px -1px;
+  color: rgba(33, 21, 4, 0.872);
+  text-shadow: 1px 1px 2px rgb(223, 143, 6);
+  font-weight: bold;
 }
 
 .add {
   color: white;
+  background-color: rgb(225, 188, 109);
+  border-radius: 5px;
   text-shadow: -1px 1px 2px rgb(7, 6, 6);
+  width: 27%;
+  padding: 10px;
+  box-shadow: -1px 1px 2px rgb(black);
 }
 
 p {
@@ -48,6 +57,14 @@ p {
   padding: 0.5em;
 }
 
+#info {
+  color: rgb(224, 214, 214);
+  /* background-color: rgba(233, 216, 180, 0.756); */
+  width: 48%;
+  border-radius: 3px;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+}
 input {
   height: 40px;
   font-family: 'Yusei Magic', sans-serif;
@@ -55,7 +72,7 @@ input {
 }
 
 span {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .submitBurg {
@@ -72,7 +89,7 @@ span {
 }
 
 .devour-burger:hover {
-  background-color: rgba(12, 108, 12, 0.762)
+  background-color: rgba(9, 70, 9, 0.762)
 }
 
 .container-list {
@@ -90,6 +107,7 @@ span {
   width: 70%;
   overflow: hidden;
   text-overflow: ellipsis;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 .devour-burger {
