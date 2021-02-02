@@ -4,10 +4,10 @@
 
   ## Description
 
-  Burger Boss is an application that tracks burgers waiting to be **devoured** and those that have already been **devoured**. Following the MVC design pattern, this application was created using Node, Express, Express Handlebars, and MySQL. This application allows the user to build a list of burgers which will save to a database. The user can enter the name of the burger they would like to add into the form which will then appear in the list of burgers on the left side of the window. That burger can then be devoured and added to the list of devoured burgers. There is also an option to delete a burger if the user wishes.
+  Burger Boss is an application that tracks burgers waiting to be **devoured** and those that have already been **devoured**. Following the MVC design pattern, this application was created using Node, Express, Express Handlebars, and MySQL. This application allows the user to build a list of burgers which will save to a database. The user can enter the name of the burger they would like to add into the form which will then appear in the list of burgers on the left side of the window. That burger can then be devoured and added to the list of devoured burgers on the right side of the screen.
 
 
-  [Click here to go to live deployed app!](https://burger-boss-catapano.herokuapp.com)
+  => [Click here to go to live deployed app!](https://burger-boss-catapano.herokuapp.com)
   
   ## Table of Contents
   
@@ -30,9 +30,48 @@
     * `schema.sql` which contain the SQL queries.
     * `seeds.sql` can contain a few starter burgers to populate the database with options.
   
+  ### Directory Structure
+  ```
+
+├── config
+│   ├── connection.js
+│   └── orm.js
+│ 
+├── controllers
+│   └── burgers_controller.js
+│
+├── db
+│   ├── schema.sql
+│   └── seeds.sql
+│
+├── models
+│   └── burger.js
+│ 
+├── node_modules
+│ 
+├── package.json
+│
+├── public
+│   └── assets
+│       ├── css
+│       │   └── burger_style.css
+│       └── img
+│           └── burger-right.jpg
+|           └── icon.png
+|           └── smiley.PNG
+│   
+│
+├── server.js
+│
+└── views
+    ├── index.handlebars
+    └── layouts
+        └── main.handlebars
+
+```
 
   ## Demonstration
-  ![Burger-Boss Gif](./public/assets/img/demo-page.png)
+  ![Burger-Boss Gif](./public/assets/img/Burger-Boss.gif)
 
 
   ## Installation
@@ -43,6 +82,7 @@
       npm install express
       npm install express-handlebars
       npm install mysql
+      npm install dotenv
 
 
   ## Usage
@@ -82,6 +122,7 @@
   * [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
   * [MySQL](https://dev.mysql.com/)
   * [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+  * [Dotenv](https://www.npmjs.com/package/dotenv)
   * [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
   * [Visual Studio Code](https://code.visualstudio.com/)
   * Terminal / Git Bash
