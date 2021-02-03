@@ -61,7 +61,8 @@
 │       ├── css
 │       │   └── burger_style.css
 │       └── img
-│           └── burger-right.jpg
+|           └── Burger-Boss.gif
+|           └── burger-right.jpg
 |           └── icon.png
 |           └── smiley.PNG
 │   
