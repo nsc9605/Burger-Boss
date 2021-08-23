@@ -9,6 +9,7 @@ router.get("/", (req, res) => {
       var hbsObject = {
         burgers: data
       };
+      console.log(hbsObject);
       res.render("index", hbsObject);
     });
   });
@@ -18,6 +19,7 @@ router.get("/", (req, res) => {
       "burger_name", 
       [req.body.burger_name], 
       (result) => {
+        console.log("req.body.burger_name");
         // Send back the ID of the new burger
       res.json({ id: result.insertId });
       res.status(200).end();
@@ -26,6 +28,7 @@ router.get("/", (req, res) => {
   
   router.put("/api/burgers/:id", (req, res) => {
     var condition = "id = " + req.params.id;
+    console.log("condition", condition);
   // Set to return with 404 error if nothing has changed
     burger.updateOne(
       { devoured: req.body.devoured }, 
@@ -37,6 +40,7 @@ router.get("/", (req, res) => {
         res.status(200).end();
       }
     });
+    console.log("updated")
   
 });
 

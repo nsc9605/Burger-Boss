@@ -27,25 +27,34 @@ h1 {
   color: white;
   font-family: "Fascinate", cursive;
   color: white;
-  text-shadow: 4px 4px 4px rgb(19, 16, 16), -1px 1px 2px #000, 1px -1px 1px #000,
-    -1px -1px 1px #000;
+  text-shadow: 4px 4px 4px rgb(19, 16, 16),
+               -1px 1px 2px #000,
+                1px -1px 1px #000,
+              -1px -1px 1px #000;
+  /* margin-left: 3%; */
 }
 
 h3 {
   font-size: 40px;
   text-align: center;
   color: rgb(232, 159, 14);
-  text-shadow: 2px 2px 5px rgba(33, 21, 4, 0.872), -1px 1px 2px #000,
-    1px -1px 0 #000, -1px -1px 0 #000;
+  text-shadow: 2px 2px 5px rgba(33, 21, 4, 0.872),
+             -1px 1px 2px #000,
+             1px -1px 0 #000, 
+             -1px -1px 0 #000;
   font-weight: bold;
 }
 
 .add {
   color: rgb(240, 175, 34);
   text-decoration: underline;
+  /* border: rgb(225, 188, 109) solid; */
   border-radius: 5px;
-  text-shadow: 2px 2px 2px rgb(7, 6, 6), -1px 1px 2px #000,
-    1px -1px 0 rgb(10, 10, 9), -1px -1px 0 rgb(12, 11, 11);
+  text-shadow: 2px 2px 2px rgb(7, 6, 6), 
+              -1px 1px 2px #000,
+               1px -1px 0 rgb(10, 10, 9),
+               -1px -1px 0 rgb(12, 11, 11);
+  /* padding: 10px; */
   box-shadow: -1px 1px 2px rgb(black);
 }
 
@@ -71,6 +80,7 @@ h3 {
   text-align: center;
   text-shadow: 2px 2px 2px black;
 }
+
 
 /* properties for input box */
 input {
@@ -150,18 +160,18 @@ span {
     grid-template-columns: minmax(15em, 1fr);
     grid-gap: 5px;
     margin: 0 auto; /* Center the DIV horizontally */
-  }
-}
+  } 
+}  
 
-@media (min-width: 500px) {
+ @media (min-width: 500px) {
   .container {
     display: grid;
     grid-template-columns: 3fr;
     width: 100%;
     margin: 0 auto; /* Center the DIV horizontally */
   }
-}
-@media (min-width: 800px) {
+} 
+ @media (min-width: 800px) {
   .container {
     width: 80%;
     margin: 0 auto;
